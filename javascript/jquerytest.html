@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script>
+        $(document).ready(function(){
+            //코드는 이제 무조건 여기에 넣겠다
+            $("button#press").on("click",(function(){
+                $("div").css({"color":"red","border":"1px solid blue"});
+                $("p.a").css({"color":"yellow","border":"1px dashed blue"});
+            }));
+            $("button#clear").on("click",(function(){
+                $("div").css({"color":"blue","border":"1px solid blue"});
+                $("p.a").css({"color":"yellow","border":"10px dashed blue"});
+                var tlist = $("ul.list li")
+                tlist.each(function(i,j){
+                    console.log("index의 값은 " + i + "데이터는 " + j);
+                    $(j).css("color","red");
+                })
+                $("button").each(function(i,j){
+                    if(i%2==0) $(this).addClass("a");
+                })
+
+
+
+
+            }));
+            $("button#print1").on("click",(function(){
+                alert(1);
+            }));
+        })
+    </script>
+</head>
+<body>
+    <div>안녕하세요</div>
+    <p>오늘은 좋은 날 휴가가 많아서용</p>
+    <p class="a">오늘은 좋은 날 휴가가 많아서용</p>
+    <button id="press">눌러라 그러면 변할것이다.</button>
+    <button id="clear">눌러라 그러면 변할것이다.</button>
+    <button id="print1">1이 보고 싶나?</button>
+    <ul class="list">
+        <li>오늘은 행복한 목요일</li>
+        <li>오늘은 행복한 금요일</li>
+        <li>오늘은 행복한 토요일</li>
+        <li>오늘은 행복한 일요일</li>
+        <li>오늘은 행복한 월요일</li>
+        <li>오늘은 행복한 화요일</li>
+        <li>오늘은 행복한 수요일</li>
+
+    </ul>
+</body>
+</html>

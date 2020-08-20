@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script>
+        $(document).ready(function () {
+
+            var str = "0123456789ascdef";
+            var a = str.split("");
+
+            setInterval(function () {
+                $("span").each(function (index) {
+                    var result = "#";
+                    for (var i = 0; i < 6; i++) {
+                        var randIndex = Math.floor(Math.random() * a.length);
+                        result += a[randIndex];
+
+                    }
+                    // result = parseInt(result);
+                    // console.log(result);
+                    // $("#"+index).css("color", result);
+                    $(this).css("color", result);
+                });
+            }, 1000)
+        });
+
+    </script>
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        for (var i = 0; i < 30; i++) {
+            for (var j = 0; j < 8; j++) {
+                document.write("<span id = " + i + "-" + j + ">문장    </span>")
+                console.log("<span id = " + i + "-" + j + ">문장    </span>")
+            }
+            document.write("<br>");
+        }
+
+    </script>
+
+</body>
+
+</html>

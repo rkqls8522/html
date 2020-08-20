@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        table,th,td{
+            border:1px solid #ccc;
+        }
+
+        td{
+            width:100px;
+            height:30px;
+        }
+
+
+    </style>
+    <title>표만들기</title>
+</head>
+<body>
+    <!-- 표에서 하나의 열에 스타일을 지정하거나 열을 몇개씩 묶어 스타일을 한꺼번에 지정할 수 있음
+    col태그는 닫는 태그가 없음
+    주의할 점은 col태그와 colgroup태그는 caption태그뒤와 tr,td태그 전에 사용해야 함
+    그리고 colgroup태그안에 있는 col태그를 비롯해 단독으로 사용한 col태그와 표의 열 갯수는 같아야 함 -->
+    <table>
+        <caption>colgroup연습</caption>
+        <colgroup>
+            <col>
+            <col span="2" stype="background-color:blue;">
+            <col style="background-color:yellow;">
+        </colgroup>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+    </table>
+</body>
+</html>

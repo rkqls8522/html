@@ -1,0 +1,13 @@
+table{
+    border: 1px dashed red;
+}
+
+td{
+    border:2px dashed ;
+    color: blue;
+}
+
+th{
+    border:3px dashed black;
+    color: blueviolet;
+}

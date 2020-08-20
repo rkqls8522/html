@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>web form</title>
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script>
+        $(document).on("ready",function(){
+
+            $("button").on("click",function(){
+                $(".reg").css({
+                    "color":"red",
+                    "font-size":"20"});
+
+            });
+
+        })
+    </script>
+    <style>
+        form legend{
+            font-size: 20px;
+        }
+        .reg{
+            color: #390;
+            font-weight: bold;
+            float: left;
+            text-align: right;
+            margin-right: 10px;
+        }
+        form ul li{
+            list-style-type:none;
+            margin:15px 0;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <h1>여름방학 특강 신청</h1>
+    <form>
+        <fieldset>
+            <legend>수강 신청인</legend>
+            <ul>
+                <li>
+                    <label for="id" class="reg">학번</label>
+                    <input type="text" onKeyup="this.value=this.value.replace(/[^0-9]/g,'');"/>
+                    <!-- <input type="text" id="id"> -->
+                </li>
+                <li>
+                    <label for="name" class="reg">이름</label>
+                    <input type="text" id="name">
+                </li>
+                <li>
+                    <label for="class" class="reg">학과</label>
+                    <select size="5" id="class" multiple>
+                        <option value="archi">건축공학과</option>
+                        <option value="mechanic">기계공학과</option>
+                        <option value="indust">산업공학과</option>
+                        <option value="elec">전기전자공학과</option>
+                        <option value="computer">컴퓨터공학과</option>
+                        <option value="chemical">화학공학과</option>
+                    </select>
+                </li>
+            </ul>
+        </fieldset>
+    </form>
+    <button>눌러라 그러면 바뀔것이다</button>
+</body>
+</html>

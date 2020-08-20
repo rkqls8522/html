@@ -1,0 +1,8 @@
+table{
+    border-spacing: 50px;
+}
+
+
+table,td,th{
+    border:1px solid burlywood;
+}

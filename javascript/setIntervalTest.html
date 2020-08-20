@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script>
+        $(document).ready(function(){
+            var a = ['00','11','33','55','66'];
+            console.log(a)
+            setInterval(() => {
+                a+=a[parseInt(Math.random()+5)];
+            }, 100);
+            console.log(a)
+            setInterval(function(){
+                result=parseInt(Math.random()*3);
+                $("p").css("color","#11ff22");
+            },300)
+            console.log(a)
+        })
+    </script>
+</head>
+<body>
+    <p>Click me too!</p>
+</body>
+</html>
